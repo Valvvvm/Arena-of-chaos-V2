@@ -29,8 +29,8 @@ local Tab = Window:Tab({
     Icon = "folder", -- lucide or rbxassetid
 })
 local Button = Tab:Button({
-    Title = "Admin V2 Free",
-    Desc = "Admin V2",
+    Title = "Admin V3 Free",
+    Desc = "Admin V3",
     Callback = function()
 local player = game.Players.LocalPlayer
 local playerGui = player:WaitForChild("PlayerGui")
@@ -41,6 +41,8 @@ local function showImageButton()
         warn("CommandsPannel not found")
         return
     end
+
+    commandsPannel.Enabled = true
 
     local imageButton = commandsPannel:WaitForChild("ImageButton", 10)
     if not imageButton then
